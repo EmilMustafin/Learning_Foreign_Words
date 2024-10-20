@@ -1,0 +1,18 @@
+.header {
+  background: rgb(245 252 245);
+  border-bottom: 1px solid #faa37bd7;
+}
+
+.nav_header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1rem;
+}
+
+.company_name {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}

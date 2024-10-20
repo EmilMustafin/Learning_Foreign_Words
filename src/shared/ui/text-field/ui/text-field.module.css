@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.inputRounded {
+  border-radius: 4px;
+}
+
+.inputBorder {
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+.inputPaddingX {
+  padding: 10px;
+}
+
+.outlineNone {
+  outline: none;
+}
+
+.inputMetroBorder {
+  border-color: #0078d4;
+}
+
+.inputMetroBg {
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+.inputMetroFocusBorder {
+  border-color: #0078d4;
+}
+
+.inputHeight {
+  height: 40px;
+}
+
+.textAreaPadding {
+  padding: 10px;
+}
+
+.errorText {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #d83b01;
+}

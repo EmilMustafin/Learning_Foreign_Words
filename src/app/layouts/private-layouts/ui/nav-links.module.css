@@ -1,0 +1,10 @@
+.link:hover {
+  color: #1da1f2;
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1.125rem;
+}

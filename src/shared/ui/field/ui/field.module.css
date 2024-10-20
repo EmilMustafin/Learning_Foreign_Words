@@ -1,0 +1,51 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkboxGroup,
+.radioGroup {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxGroup span,
+.radioLabel {
+  margin-left: 8px;
+}
+
+.radioGroup {
+  flex-direction: column;
+}
+
+@media (width <= 600px) {
+  .field {
+    margin-bottom: 16px;
+  }
+
+  .label {
+    font-size: 0.9rem;
+  }
+
+  .input,
+  .select {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+}
