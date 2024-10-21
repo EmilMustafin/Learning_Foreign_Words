@@ -1,7 +1,7 @@
 import { http, HttpResponse } from 'msw';
 
 export const handlers = [
-  http.get('api/cards', () => {
+  http.get('/api/cards', () => {
     return HttpResponse.json([
       {
         id: 1,
@@ -100,7 +100,7 @@ export const handlers = [
 const mockToken = 'mocked-token-admin';
 
 export const authHandlers = [
-  http.post<never, { username: string; password: string }>('api/login', async ({ request }) => {
+  http.post<never, { username: string; password: string }>('/api/login', async ({ request }) => {
     const { username, password } = await request.json();
 
     if (username === 'admin' && password === 'admin') {
