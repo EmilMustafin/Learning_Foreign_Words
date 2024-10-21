@@ -1,7 +1,7 @@
 import { http, HttpResponse } from 'msw';
 
 export const handlers = [
-  http.get('/api/cards', () => {
+  http.get(`${window.location.origin}/api/cards`, () => {
     return HttpResponse.json([
       {
         id: 1,
@@ -100,23 +100,26 @@ export const handlers = [
 const mockToken = 'mocked-token-admin';
 
 export const authHandlers = [
-  http.post<never, { username: string; password: string }>('/api/login', async ({ request }) => {
-    const { username, password } = await request.json();
+  http.post<never, { username: string; password: string }>(
+    `${window.location.origin}/api/login`,
+    async ({ request }) => {
+      const { username, password } = await request.json();
 
-    if (username === 'admin' && password === 'admin') {
+      if (username === 'admin' && password === 'admin') {
+        return HttpResponse.json(
+          {
+            token: mockToken,
+          },
+          { status: 200 },
+        );
+      }
+
       return HttpResponse.json(
         {
-          token: mockToken,
+          error: 'Invalid username or password',
         },
-        { status: 200 },
+        { status: 403 },
       );
-    }
-
-    return HttpResponse.json(
-      {
-        error: 'Invalid username or password',
-      },
-      { status: 403 },
-    );
-  }),
+    },
+  ),
 ];
